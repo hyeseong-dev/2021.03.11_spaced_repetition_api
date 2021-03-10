@@ -1,7 +1,7 @@
 from django.db import models
+from apps.utils.models import TimeStamps
 
-
-class Card(models.Model):
+class Card(TimeStamps):
     deck = models.ForeignKey('decks.Deck', on_delete=models.CASCADE)
     question = models.TextField()
     answer = models.TextField()
